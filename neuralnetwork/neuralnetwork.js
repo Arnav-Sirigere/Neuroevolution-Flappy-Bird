@@ -106,4 +106,19 @@ class NeuralNetwork {
     nn.learning_rate = data.learning_rate;
     return nn;
   }
+  
+  mutate(rate) {
+    function mutate(val) {
+      // return random(1) < rate ? val + randomGaussian(0, 0.1) : val;
+      if (random(1) < rate) {
+        return val + randomGaussian(0, 0.1);
+      } else {
+        return val;
+      }
+    }
+    this.weights_ih.map(mutate);
+    this.weights_ho.map(mutate);
+    this.bias_h.map(mutate);
+    this.bias_o.map(mutate);
+  }
 }
