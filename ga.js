@@ -18,6 +18,7 @@ function calcFitness() {
 }
 
 function pickOne() {
+  shuffle(savedBirds, true);
   let r = random(1);
   let index = 0;
   while (r > 0) {
