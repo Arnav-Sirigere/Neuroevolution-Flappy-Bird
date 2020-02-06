@@ -12,7 +12,7 @@ function setup() {
   createCanvas(600, 400);
   slider = createSlider(1, 100, 1);
   gen_ele = createP('');
-  createP('Speed it up!').position(width + 160, height);
+  createP('<= Speed it up!').position(width + 180, height - 25);
   for (let i = 0; i < TOTAL; i++) {
     birds[i] = new Bird();
   }
